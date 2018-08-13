@@ -1,4 +1,4 @@
-package com.aljazkajtna.kamino.database;
+package com.aljazkajtna.kamino.data.database;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
