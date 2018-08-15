@@ -7,7 +7,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public interface SWApiWebService {
+public interface SWApiwebService {
 
     @GET("planets/10")
     Call<Planet> getPlanet();

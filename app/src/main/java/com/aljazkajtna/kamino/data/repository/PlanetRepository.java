@@ -7,7 +7,7 @@ import com.aljazkajtna.kamino.AppConstants;
 import com.aljazkajtna.kamino.data.database.SWApiDao;
 import com.aljazkajtna.kamino.data.pojo.Planet;
 import com.aljazkajtna.kamino.data.pojo.Timestamp;
-import com.aljazkajtna.kamino.data.web.SWApiWebService;
+import com.aljazkajtna.kamino.data.web.SWApiwebService;
 
 import java.util.concurrent.Executor;
 
@@ -19,11 +19,11 @@ public class PlanetRepository {
 
     private static final String Tag = "PlanetRepository";
 
-    private final SWApiWebService webService;
+    private final SWApiwebService webService;
     private final SWApiDao SWApiDao;
     private final Executor executor;
 
-    public PlanetRepository(SWApiWebService webService, SWApiDao SWApiDao, Executor executor) {
+    public PlanetRepository(SWApiwebService webService, SWApiDao SWApiDao, Executor executor) {
         this.webService = webService;
         this.SWApiDao = SWApiDao;
         this.executor = executor;

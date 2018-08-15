@@ -9,6 +9,6 @@ import com.aljazkajtna.kamino.data.pojo.Resident;
 @Database(entities = {Planet.class, Resident.class}, version = 1)
 public abstract class SWapiDatabase extends RoomDatabase {
 
-    public abstract SWApiDao planetDao();
+    public abstract SWApiDao swapiDao();
 
 }
