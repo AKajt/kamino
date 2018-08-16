@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.aljazkajtna.kamino.R;
 import com.aljazkajtna.kamino.data.pojo.Planet;
 
-public class PlanetScreenViewController {
+public class PlanetScreenController {
 
     private PlanetFragment fragment;
     private View rootView;
@@ -28,7 +28,7 @@ public class PlanetScreenViewController {
     private TextView surfaceWater;
     private TextView population;
 
-    public PlanetScreenViewController(PlanetFragment fragment) {
+    public PlanetScreenController(PlanetFragment fragment) {
         this.fragment = fragment;
         rootView = fragment.getView();
 
@@ -51,6 +51,10 @@ public class PlanetScreenViewController {
     }
 
     private void initListeners() {
+        image.setOnClickListener(view -> {
+            fragment.openImage();
+        });
+
         likeButton.setOnClickListener(view -> {
             fragment.likePlanet();
         });
@@ -61,6 +65,10 @@ public class PlanetScreenViewController {
     }
 
     public void updateView(Planet planet) {
+        if (planet == null) {
+            return;
+        }
+
         name.setText(planet.getName());
         likes.setText(fragment.getString(R.string.likes, planet.getLikes()));
         rotationPeriod.setText(planet.getRotationPeriod());

@@ -1,4 +1,4 @@
-package com.aljazkajtna.kamino.ui.planet;
+package com.aljazkajtna.kamino.ui.planetpicture;
 
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
@@ -14,47 +14,34 @@ import com.aljazkajtna.kamino.R;
 
 import javax.inject.Inject;
 
-import androidx.navigation.Navigation;
 import dagger.android.support.AndroidSupportInjection;
 
-public class PlanetFragment extends Fragment {
+public class PlanetPictureFragment extends Fragment {
 
     @Inject
     ViewModelProvider.Factory viewModelFactory;
 
-    private PlanetScreenController viewController;
-    private PlanetScreenModel viewModel;
+    private PlanetPictureScreenController viewController;
+    private PlanetPictureScreenModel viewModel;
 
-    public PlanetFragment() {
+    public PlanetPictureFragment() {
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_planet, container, false);
+        return inflater.inflate(R.layout.fragment_planet_picture, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         AndroidSupportInjection.inject(this);
-        viewController = new PlanetScreenController(this);
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(PlanetScreenModel.class);
+        viewController = new PlanetPictureScreenController(this);
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(PlanetPictureScreenModel.class);
         viewModel.init();
         viewModel.getPlanetLiveData().observe(this, planet -> {
             viewController.updateView(planet);
         });
-    }
-
-    public void openImage() {
-        Navigation.findNavController(this.getView().findViewById(R.id.nav_host_fragment)).navigate(R.id.action_planetFragment_to_planetPictureFragment);
-    }
-
-    public void likePlanet() {
-        //todo
-    }
-
-    public void viewResidents() {
-        //todo
     }
 }

@@ -41,7 +41,10 @@ public class PlanetRepository {
 
     private void refreshPlanet() {
         executor.execute(() -> {
-            long timestamp = SWApiDao.loadTimestamp().getTimestamp();
+            long timestamp = 0;
+            if (SWApiDao.loadTimestamp() != null) {
+                timestamp = SWApiDao.loadTimestamp().getTimestamp();
+            }
             boolean shouldFetch = System.currentTimeMillis() - timestamp > AppConstants.DATA_EXPIRATION_DURATION;
             if (shouldFetch) {
                 webService.getPlanet().enqueue(new Callback<Planet>() {

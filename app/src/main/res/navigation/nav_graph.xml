@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/planetFragment">
+
+    <fragment
+        android:id="@+id/planetFragment"
+        android:name="com.aljazkajtna.kamino.ui.planet.PlanetFragment"
+        android:label="fragment_planet"
+        tools:layout="@layout/fragment_planet" >
+        <action
+            android:id="@+id/action_planetFragment_to_planetPictureFragment"
+            app:destination="@id/planetPictureFragment" />
+        <action
+            android:id="@+id/action_planetFragment_to_residentsFragment"
+            app:destination="@id/residentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planetPictureFragment"
+        android:name="com.aljazkajtna.kamino.ui.planetpicture.PlanetPictureFragment"
+        android:label="fragment_planet_picture"
+        tools:layout="@layout/fragment_planet_picture" />
+    <fragment
+        android:id="@+id/residentsFragment"
+        android:name="com.aljazkajtna.kamino.ui.residents.ResidentsFragment"
+        android:label="ResidentsFragment" >
+        <action
+            android:id="@+id/action_residentsFragment_to_residentFragment"
+            app:destination="@id/residentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/residentFragment"
+        android:name="com.aljazkajtna.kamino.ui.resident.ResidentFragment"
+        android:label="ResidentFragment" />
+</navigation>
