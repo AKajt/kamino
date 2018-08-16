@@ -21,7 +21,6 @@ public class ResidentScreenController {
     private TextView eyeColor;
     private TextView birthYear;
     private TextView gender;
-    private TextView homeworld;
     private TextView noImage;
 
     public ResidentScreenController(ResidentFragment fragment) {
@@ -37,7 +36,6 @@ public class ResidentScreenController {
         eyeColor = rootView.findViewById(R.id.eyeColorValue);
         birthYear = rootView.findViewById(R.id.birthYearValue);
         gender = rootView.findViewById(R.id.genderValue);
-        homeworld = rootView.findViewById(R.id.homeworldValue);
         noImage = rootView.findViewById(R.id.noImage);
     }
 
@@ -50,7 +48,6 @@ public class ResidentScreenController {
         eyeColor.setText(resident.getEyeColor());
         birthYear.setText(resident.getBirthYear());
         gender.setText(resident.getGender());
-        homeworld.setText(resident.getHomeworld());
     }
 
     public ImageView getImage() {

@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:typeface="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image" />
@@ -110,16 +111,6 @@
         tools:text="@string/gender" />
 
     <TextView
-        android:id="@+id/homeworld"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/homeworld"
-        app:layout_constraintStart_toStartOf="@+id/gender"
-        app:layout_constraintTop_toBottomOf="@+id/gender"
-        tools:text="@string/homeworld" />
-
-    <TextView
         android:id="@+id/heightValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -175,14 +166,6 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/birthYearValue"
         app:layout_constraintTop_toBottomOf="@+id/birthYearValue" />
-
-    <TextView
-        android:id="@+id/homeworldValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/genderValue"
-        app:layout_constraintTop_toBottomOf="@+id/genderValue" />
 
     <TextView
         android:id="@+id/noImage"
