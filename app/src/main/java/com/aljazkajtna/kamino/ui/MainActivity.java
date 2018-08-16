@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
 
     @Override
     public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(drawer, Navigation.findNavController(findViewById(R.id.nav_host_fragment)));
+        try {
+            return NavigationUI.navigateUp(drawer, Navigation.findNavController(findViewById(R.id.nav_host_fragment)));
+        } catch (Exception e) {
+            return false;
+        }
+
     }
 }
