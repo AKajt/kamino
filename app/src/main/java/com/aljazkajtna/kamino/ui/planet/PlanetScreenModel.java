@@ -29,4 +29,9 @@ public class PlanetScreenModel extends ViewModel {
     public LiveData<Planet> getPlanetLiveData() {
         return planetLiveData;
     }
+
+    public void likePlanet() {
+        Planet planet = planetLiveData.getValue();
+        planetRepository.likePlanet(planet);
+    }
 }

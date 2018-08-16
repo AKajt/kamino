@@ -59,7 +59,7 @@ public class PlanetFragment extends Fragment {
     }
 
     public void likePlanet() {
-        //todo
+        viewModel.likePlanet();
     }
 
     public void viewResidents() {

@@ -79,6 +79,8 @@ public class PlanetScreenController {
         terrain.setText(planet.getTerrain());
         surfaceWater.setText(planet.getSurfaceWater());
         population.setText(planet.getPopulation());
+
+        likeButton.setVisibility(planet.isLiked() ? View.GONE : View.VISIBLE);
     }
 
     public ImageView getImage() {

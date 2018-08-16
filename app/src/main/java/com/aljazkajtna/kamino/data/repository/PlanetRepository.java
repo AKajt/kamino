@@ -39,6 +39,18 @@ public class PlanetRepository {
         return SWApiDao.loadPlanet();
     }
 
+    public void savePlanet(Planet planet) {
+        executor.execute(() -> {
+            SWApiDao.savePlanet(planet);
+        });
+    }
+
+    public void likePlanet(Planet planet) {
+        planet.setLiked(true);
+        planet.setLikes(planet.getLikes()+1);
+        savePlanet(planet);
+    }
+
     private void refreshPlanet() {
         executor.execute(() -> {
             long timestamp = 0;
@@ -53,11 +65,18 @@ public class PlanetRepository {
                         executor.execute(() -> {
                             if (response.isSuccessful()) {
                                 Planet planet = response.body();
+
                                 SWApiDao.deleteTimestamp();
                                 Timestamp ts = new Timestamp();
                                 ts.setTimestamp(System.currentTimeMillis());
                                 SWApiDao.saveTimestamp(ts);
-                                SWApiDao.savePlanet(planet);
+
+                                Planet p = SWApiDao.loadPlanet().getValue();
+                                if (p != null && p.isLiked()) {
+                                    likePlanet(planet);
+                                    return;
+                                }
+                                savePlanet(planet);
                             } else {
                                 Log.d(Tag, "Error while fetching data: " + response.code());
                             }

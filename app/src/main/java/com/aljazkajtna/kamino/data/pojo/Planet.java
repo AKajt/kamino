@@ -57,6 +57,8 @@ public class Planet {
     @Expose
     private Integer likes;
 
+    private boolean liked;
+
     public String getName() {
         return name;
     }
@@ -169,4 +171,11 @@ public class Planet {
         this.likes = likes;
     }
 
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
+    }
 }
