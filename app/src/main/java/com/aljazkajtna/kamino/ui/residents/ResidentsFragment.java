@@ -13,10 +13,12 @@ import android.view.ViewGroup;
 import com.aljazkajtna.kamino.R;
 import com.aljazkajtna.kamino.data.pojo.Resident;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
 
+import androidx.navigation.Navigation;
 import dagger.android.support.AndroidSupportInjection;
 
 public class ResidentsFragment extends Fragment {
@@ -50,5 +52,9 @@ public class ResidentsFragment extends Fragment {
     }
 
     public void openResident(Resident data) {
+        Bundle bundle = new Bundle();
+        bundle.putString("resident", data.getName());
+
+        Navigation.findNavController(this.getActivity(), R.id.nav_host_fragment).navigate(R.id.action_residentsFragment_to_residentFragment, bundle);
     }
 }

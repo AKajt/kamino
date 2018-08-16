@@ -21,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="TextView"
         android:textAppearance="@android:style/TextAppearance.Material.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,10 +41,10 @@
         android:id="@+id/height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginEnd="8dp"
+        android:text="@string/height"
         app:layout_constraintEnd_toStartOf="@+id/divider3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider3"
@@ -56,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/mass"
         app:layout_constraintStart_toStartOf="@+id/height"
         app:layout_constraintTop_toBottomOf="@+id/height"
         tools:text="@string/mass" />
@@ -66,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/hair_color"
         app:layout_constraintStart_toStartOf="@+id/mass"
         app:layout_constraintTop_toBottomOf="@+id/mass"
         tools:text="@string/hair_color" />
@@ -76,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/skin_color"
         app:layout_constraintStart_toStartOf="@+id/hairColor"
         app:layout_constraintTop_toBottomOf="@+id/hairColor"
         tools:text="@string/skin_color" />
@@ -86,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/eye_color"
         app:layout_constraintStart_toStartOf="@+id/skinColor"
         app:layout_constraintTop_toBottomOf="@+id/skinColor"
         tools:text="@string/eye_color" />
@@ -96,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/birth_year"
         app:layout_constraintStart_toStartOf="@+id/eyeColor"
         app:layout_constraintTop_toBottomOf="@+id/eyeColor"
         tools:text="@string/birth_year" />
@@ -106,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/gender"
         app:layout_constraintStart_toStartOf="@+id/birthYear"
         app:layout_constraintTop_toBottomOf="@+id/birthYear"
         tools:text="@string/gender" />
@@ -116,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/homeworld"
         app:layout_constraintStart_toStartOf="@+id/gender"
         app:layout_constraintTop_toBottomOf="@+id/gender"
         tools:text="@string/homeworld" />
@@ -127,7 +126,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/divider3"
         app:layout_constraintTop_toTopOf="@+id/divider3" />
 
@@ -136,7 +134,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/heightValue"
         app:layout_constraintTop_toBottomOf="@+id/heightValue" />
 
@@ -145,7 +142,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/massValue"
         app:layout_constraintTop_toBottomOf="@+id/massValue" />
 
@@ -154,7 +150,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/hairColorValue"
         app:layout_constraintTop_toBottomOf="@+id/hairColorValue" />
 
@@ -163,7 +158,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/skinColorValue"
         app:layout_constraintTop_toBottomOf="@+id/skinColorValue" />
 
@@ -172,7 +166,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/eyeColorValue"
         app:layout_constraintTop_toBottomOf="@+id/eyeColorValue" />
 
@@ -181,7 +174,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/birthYearValue"
         app:layout_constraintTop_toBottomOf="@+id/birthYearValue" />
 
@@ -190,7 +182,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/genderValue"
         app:layout_constraintTop_toBottomOf="@+id/genderValue" />
 

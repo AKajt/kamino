@@ -38,6 +38,10 @@ public class ResidentsRepository {
         return SWApiDao.loadResidents();
     }
 
+    public LiveData<List<Resident>> getSpecificResident(String name) {
+        return SWApiDao.loadResident(name);
+    }
+
     private void refreshResidents(List<Integer> residents) {
         executor.execute(() -> {
             for (int i : residents) {

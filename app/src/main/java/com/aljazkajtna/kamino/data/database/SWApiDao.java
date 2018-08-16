@@ -28,6 +28,9 @@ public interface SWApiDao {
     @Query("SELECT * FROM resident")
     LiveData<List<Resident>> loadResidents();
 
+    @Query("SELECT * FROM resident WHERE name LIKE :specificName")
+    LiveData<List<Resident>> loadResident(String specificName);
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void saveTimestamp(Timestamp timestamp);
 
