@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aljazkajtna.kamino.R;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import javax.inject.Inject;
 
@@ -44,11 +46,13 @@ public class PlanetFragment extends Fragment {
         viewModel.getPlanetLiveData().observe(this, planet -> {
             if (planet == null) return;
             viewController.updateView(planet);
+            RequestOptions options = new RequestOptions().centerCrop();
+            Glide.with(PlanetFragment.this).load(planet.getImageUrl()).apply(options).into(viewController.getImage());
         });
     }
 
     public void openImage() {
-        Navigation.findNavController(this.getView()).navigate(R.id.action_planetFragment_to_planetPictureFragment);
+        Navigation.findNavController(this.getActivity(), R.id.nav_host_fragment).navigate(R.id.action_planetFragment_to_planetPictureFragment);
     }
 
     public void likePlanet() {

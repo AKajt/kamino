@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.aljazkajtna.kamino.ui.FactoryViewModel;
 import com.aljazkajtna.kamino.ui.planet.PlanetScreenModel;
+import com.aljazkajtna.kamino.ui.planetpicture.PlanetPictureScreenModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -17,6 +18,11 @@ public abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(PlanetScreenModel.class)
     abstract ViewModel bindPlanetScreenViewModel(PlanetScreenModel planetScreenModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(PlanetPictureScreenModel.class)
+    abstract ViewModel bindPlanetPictureScreenModel(PlanetPictureScreenModel planetPictureScreenModel);
 
     @Binds
     abstract ViewModelProvider.Factory bindViewModelFactory(FactoryViewModel factory);

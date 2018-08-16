@@ -8,7 +8,7 @@ import com.aljazkajtna.kamino.data.repository.PlanetRepository;
 
 import javax.inject.Inject;
 
-class PlanetPictureScreenModel extends ViewModel {
+public class PlanetPictureScreenModel extends ViewModel {
 
     private LiveData<Planet> planetLiveData;
     private PlanetRepository planetRepository;

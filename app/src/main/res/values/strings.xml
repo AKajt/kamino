@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Kamino</string>
 
+    <!--Fragment names-->
+    <string name="fragment_planet">Planet</string>
+    <string name="fragment_planet_picture">Planet picture</string>
+    <string name="fragment_residents">Residents</string>
+    <string name="fragment_resident">Resident</string>
+
     <!--Planet fragment-->
     <string name="rotation_period">Rotation period:</string>
     <string name="orbital_period">Orbital period:</string>

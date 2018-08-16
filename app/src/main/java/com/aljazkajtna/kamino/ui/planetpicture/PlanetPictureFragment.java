@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aljazkajtna.kamino.R;
+import com.aljazkajtna.kamino.ui.planet.PlanetFragment;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import javax.inject.Inject;
 
@@ -42,6 +45,8 @@ public class PlanetPictureFragment extends Fragment {
         viewModel.init();
         viewModel.getPlanetLiveData().observe(this, planet -> {
             viewController.updateView(planet);
+            RequestOptions options = new RequestOptions().centerCrop();
+            Glide.with(PlanetPictureFragment.this).load(planet.getImageUrl()).apply(options).into(viewController.getImage());
         });
     }
 }

@@ -81,4 +81,7 @@ public class PlanetScreenController {
         population.setText(planet.getPopulation());
     }
 
+    public ImageView getImage() {
+        return image;
+    }
 }

@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/planetFragment"
         android:name="com.aljazkajtna.kamino.ui.planet.PlanetFragment"
-        android:label="fragment_planet"
-        tools:layout="@layout/fragment_planet" >
+        android:label="Planet"
+        tools:layout="@layout/fragment_planet">
         <action
             android:id="@+id/action_planetFragment_to_planetPictureFragment"
             app:destination="@id/planetPictureFragment" />
@@ -20,12 +20,12 @@
     <fragment
         android:id="@+id/planetPictureFragment"
         android:name="com.aljazkajtna.kamino.ui.planetpicture.PlanetPictureFragment"
-        android:label="fragment_planet_picture"
+        android:label="Planet picture"
         tools:layout="@layout/fragment_planet_picture" />
     <fragment
         android:id="@+id/residentsFragment"
         android:name="com.aljazkajtna.kamino.ui.residents.ResidentsFragment"
-        android:label="ResidentsFragment" >
+        android:label="Residents">
         <action
             android:id="@+id/action_residentsFragment_to_residentFragment"
             app:destination="@id/residentFragment" />
@@ -33,5 +33,5 @@
     <fragment
         android:id="@+id/residentFragment"
         android:name="com.aljazkajtna.kamino.ui.resident.ResidentFragment"
-        android:label="ResidentFragment" />
+        android:label="Resident" />
 </navigation>
