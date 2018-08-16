@@ -11,8 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.aljazkajtna.kamino.R;
+import com.aljazkajtna.kamino.data.pojo.Resident;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+
+import java.util.ArrayList;
 
 import javax.inject.Inject;
 
@@ -60,6 +63,13 @@ public class PlanetFragment extends Fragment {
     }
 
     public void viewResidents() {
-        //todo
+        Bundle bundle = new Bundle();
+        ArrayList<Integer> residents = new ArrayList<>();
+        for (String s : viewModel.getPlanetLiveData().getValue().getResidents()) {
+            String[] value = s.split("/");
+            residents.add(Integer.valueOf(value[value.length-1]));
+        }
+        bundle.putSerializable("residents", residents);
+        Navigation.findNavController(this.getActivity(), R.id.nav_host_fragment).navigate(R.id.action_planetFragment_to_residentsFragment, bundle);
     }
 }

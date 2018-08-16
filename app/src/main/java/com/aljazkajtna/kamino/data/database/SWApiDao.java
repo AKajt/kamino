@@ -22,7 +22,7 @@ public interface SWApiDao {
     @Query("SELECT * FROM planet")
     LiveData<Planet> loadPlanet();
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void saveResident(Resident resident);
 
     @Query("SELECT * FROM resident")

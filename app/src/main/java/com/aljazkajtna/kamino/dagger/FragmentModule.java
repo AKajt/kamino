@@ -2,6 +2,7 @@ package com.aljazkajtna.kamino.dagger;
 
 import com.aljazkajtna.kamino.ui.planet.PlanetFragment;
 import com.aljazkajtna.kamino.ui.planetpicture.PlanetPictureFragment;
+import com.aljazkajtna.kamino.ui.residents.ResidentsFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -14,4 +15,7 @@ public abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract PlanetPictureFragment contributePlanetPictureFragment();
+
+    @ContributesAndroidInjector
+    abstract ResidentsFragment contributeResidentsFragment();
 }
