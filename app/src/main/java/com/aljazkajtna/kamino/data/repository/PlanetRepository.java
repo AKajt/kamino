@@ -57,6 +57,7 @@ public class PlanetRepository {
                                 Timestamp ts = new Timestamp();
                                 ts.setTimestamp(System.currentTimeMillis());
                                 SWApiDao.saveTimestamp(ts);
+                                SWApiDao.savePlanet(planet);
                             } else {
                                 Log.d(Tag, "Error while fetching data: " + response.code());
                             }

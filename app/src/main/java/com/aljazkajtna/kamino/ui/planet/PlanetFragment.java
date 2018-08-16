@@ -42,12 +42,13 @@ public class PlanetFragment extends Fragment {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(PlanetScreenModel.class);
         viewModel.init();
         viewModel.getPlanetLiveData().observe(this, planet -> {
+            if (planet == null) return;
             viewController.updateView(planet);
         });
     }
 
     public void openImage() {
-        Navigation.findNavController(this.getView().findViewById(R.id.nav_host_fragment)).navigate(R.id.action_planetFragment_to_planetPictureFragment);
+        Navigation.findNavController(this.getView()).navigate(R.id.action_planetFragment_to_planetPictureFragment);
     }
 
     public void likePlanet() {
