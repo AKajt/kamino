@@ -6,13 +6,19 @@ import android.arch.lifecycle.ViewModel;
 import com.aljazkajtna.kamino.data.pojo.Planet;
 import com.aljazkajtna.kamino.data.repository.PlanetRepository;
 
+import javax.inject.Inject;
+
 public class PlanetScreenModel extends ViewModel {
 
     private LiveData<Planet> planetLiveData;
     private PlanetRepository planetRepository;
 
+    @Inject
     public PlanetScreenModel(PlanetRepository planetRepository) {
         this.planetRepository = planetRepository;
+    }
+
+    public void init() {
         if (planetLiveData != null) {
             return;
         }

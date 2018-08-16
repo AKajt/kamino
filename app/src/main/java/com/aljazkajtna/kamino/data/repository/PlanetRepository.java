@@ -11,10 +11,14 @@ import com.aljazkajtna.kamino.data.web.SWApiwebService;
 
 import java.util.concurrent.Executor;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+@Singleton
 public class PlanetRepository {
 
     private static final String Tag = "PlanetRepository";
@@ -23,6 +27,7 @@ public class PlanetRepository {
     private final SWApiDao SWApiDao;
     private final Executor executor;
 
+    @Inject
     public PlanetRepository(SWApiwebService webService, SWApiDao SWApiDao, Executor executor) {
         this.webService = webService;
         this.SWApiDao = SWApiDao;
