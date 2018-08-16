@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">Kamino</string>
+
+    <!--Fragment names-->
+    <string name="fragment_planet">Planet</string>
+    <string name="fragment_planet_picture">Planet picture</string>
+    <string name="fragment_residents">Residents</string>
+    <string name="fragment_resident">Resident</string>
+
+    <!--Planet fragment-->
+    <string name="rotation_period">Rotation period:</string>
+    <string name="orbital_period">Orbital period:</string>
+    <string name="diameter">Diameter:</string>
+    <string name="climate">Climate:</string>
+    <string name="gravity">Gravity:</string>
+    <string name="terrain">Terrain:</string>
+    <string name="surface_water">Surface water:</string>
+    <string name="population">Population:</string>
+    <string name="residents_button">View residents</string>
+    <string name="likes">%1$d likes</string>
+    <string name="like_button">Like</string>
+
+    <!--Residents fragment-->
+    <string name="residents">Residents:</string>
+
+    <!--Resident fragment-->
+    <string name="height">Height:</string>
+    <string name="mass">Mass:</string>
+    <string name="hair_color">Hair color:</string>
+    <string name="skin_color">Skin color:</string>
+    <string name="eye_color">Eye color:</string>
+    <string name="birth_year">Birth year:</string>
+    <string name="gender">Gender:</string>
+    <string name="homeworld">Homeworld:</string>
+    <string name="no_image">No image</string>
+
+
+
+
+
 </resources>

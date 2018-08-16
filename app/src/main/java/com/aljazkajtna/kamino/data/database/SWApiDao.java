@@ -22,11 +22,14 @@ public interface SWApiDao {
     @Query("SELECT * FROM planet")
     LiveData<Planet> loadPlanet();
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void saveResident(Resident resident);
 
     @Query("SELECT * FROM resident")
     LiveData<List<Resident>> loadResidents();
+
+    @Query("SELECT * FROM resident WHERE name LIKE :specificName")
+    LiveData<List<Resident>> loadResident(String specificName);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void saveTimestamp(Timestamp timestamp);
