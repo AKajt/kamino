@@ -22,6 +22,7 @@ public class ResidentScreenController {
     private TextView birthYear;
     private TextView gender;
     private TextView homeworld;
+    private TextView noImage;
 
     public ResidentScreenController(ResidentFragment fragment) {
         this.fragment = fragment;
@@ -37,6 +38,7 @@ public class ResidentScreenController {
         birthYear = rootView.findViewById(R.id.birthYearValue);
         gender = rootView.findViewById(R.id.genderValue);
         homeworld = rootView.findViewById(R.id.homeworldValue);
+        noImage = rootView.findViewById(R.id.noImage);
     }
 
     public void updateView(Resident resident) {
@@ -53,5 +55,9 @@ public class ResidentScreenController {
 
     public ImageView getImage() {
         return image;
+    }
+
+    public TextView getNoImage() {
+        return noImage;
     }
 }
