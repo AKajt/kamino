@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.aljazkajtna.kamino.data.database.SWApiDao;
 import com.aljazkajtna.kamino.data.pojo.Resident;
-import com.aljazkajtna.kamino.data.web.SWApiwebService;
+import com.aljazkajtna.kamino.data.web.SWApiWebService;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -22,12 +22,12 @@ public class ResidentsRepository {
 
     private static final String Tag = "ResidentRepository";
 
-    private final SWApiwebService webService;
+    private final SWApiWebService webService;
     private final com.aljazkajtna.kamino.data.database.SWApiDao SWApiDao;
     private final Executor executor;
 
     @Inject
-    public ResidentsRepository(SWApiwebService webService, SWApiDao SWApiDao, Executor executor) {
+    public ResidentsRepository(SWApiWebService webService, SWApiDao SWApiDao, Executor executor) {
         this.webService = webService;
         this.SWApiDao = SWApiDao;
         this.executor = executor;

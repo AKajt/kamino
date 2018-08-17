@@ -6,7 +6,7 @@ import android.arch.persistence.room.Room;
 import com.aljazkajtna.kamino.data.database.SWApiDao;
 import com.aljazkajtna.kamino.data.database.SWapiDatabase;
 import com.aljazkajtna.kamino.data.repository.PlanetRepository;
-import com.aljazkajtna.kamino.data.web.SWApiwebService;
+import com.aljazkajtna.kamino.data.web.SWApiWebService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -42,7 +42,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    PlanetRepository providePlanetRepository(SWApiwebService webservice, SWApiDao swapiDao, Executor executor) {
+    PlanetRepository providePlanetRepository(SWApiWebService webservice, SWApiDao swapiDao, Executor executor) {
         return new PlanetRepository(webservice, swapiDao, executor);
     }
 
@@ -62,7 +62,7 @@ public class AppModule {
 
     @Provides
     @Singleton
-    SWApiwebService provideSWapiWebservice(Retrofit restAdapter) {
-        return restAdapter.create(SWApiwebService.class);
+    SWApiWebService provideSWapiWebservice(Retrofit restAdapter) {
+        return restAdapter.create(SWApiWebService.class);
     }
 }
